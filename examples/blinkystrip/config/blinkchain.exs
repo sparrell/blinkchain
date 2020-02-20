@@ -1,15 +1,5 @@
 use Mix.Config
 
-# Arrangement looks like this:
-# Y  X: 0  1  2  3  4  5  6  7
-# 0  [  0  1  2  3  4  5  6  7 ] <- Adafruit NeoPixel Stick on Channel 1 (pin 13)
-#    |-------------------------|
-# 1  |  0  1  2  3  4  5  6  7 |
-# 2  |  8  9 10 11 12 13 14 15 | <- Pimoroni Unicorn pHat on Channel 0 (pin 18)
-# 3  | 16 17 18 19 20 21 22 23 |
-# 4  | 24 25 26 27 28 29 30 31 |
-#    |-------------------------|
-
 # This gamma table will give a more visually-appealing look to the LEDs based
 # on the non-linear way that human eyes respond to pulse-width modulated LED
 # lights.
@@ -39,7 +29,7 @@ config :blinkchain,
 
 config :blinkchain, :channel0,
   pin: 18,
-  type: :grb,
+  type: :rgb,
   brightness: 32,
   gamma: gamma,
   arrangement: [

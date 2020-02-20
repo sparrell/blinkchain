@@ -11,7 +11,7 @@ config :blinkchain, :channel0,
   pin: 18,
   arrangement: [
     %{
-      type: :grb,
+      type: :rgb,
       brightness: 32,
       gamma: gamma,
       arrangement: [
