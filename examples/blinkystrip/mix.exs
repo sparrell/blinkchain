@@ -1,7 +1,7 @@
-defmodule Rainbow.MixProject do
+defmodule Blinkystrip.MixProject do
   use Mix.Project
 
-  @app :rainbow
+  @app :blinkystrip
   @version "0.1.0"
   @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4]
 
@@ -30,7 +30,7 @@ defmodule Rainbow.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: {Rainbow.Application, []},
+      mod: {Blinkystrip.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

@@ -5,16 +5,22 @@ log_level = System.get_env("LOG_LEVEL")
 config :logger, level: String.to_atom(log_level || "debug")
 
 config :blinkchain,
-  canvas: {8, 4}
+  canvas: {50, 1}
 
 config :blinkchain, :channel0,
   pin: 18,
   arrangement: [
     %{
-      type: :matrix,
-      origin: {0, 0},
-      count: {8, 4},
-      direction: {:right, :down},
-      progressive: true
+      type: :grb,
+      brightness: 32,
+      gamma: gamma,
+      arrangement: [
+        %{
+          type: :strip,
+          origin: {0, 0},
+          count: 50,
+          direction: :right
+        }
+      ]
     }
   ]
